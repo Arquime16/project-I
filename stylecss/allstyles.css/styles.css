@@ -281,20 +281,25 @@ tr:nth-child(even) {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
 }
-.fotorama {
-  width: 100%; /* Ensure the gallery takes the full width of its container */
-  height: 80%; /* Maintain aspect ratio */
-  max-width: 900%; /*Set a maximum width to prevent it from being too large */
-  margin: 0 auto; /* Center the gallery within its container */
+#strategic  h2 {
+  text-align: center;
+  color: #333 !important;
+  padding-bottom: 10px;
 }
-.fotorama img {
-  max-width: 100%; /* Ensure images do not exceed the container width*/
-  max-height: 100%; /*Allow images to expand based on content */
-  border: none !important;
-  width: 40% !important;
-  height: auto !important; /* Maintain aspect ratio */
+.rowstrategic {
+  margin-top: 40px;
 }
-.values, .related-images, .related-posts, .linkinterest, .linkrelated, .linkadditional, .boxd, .boxe,  .finiquito1, .finiquito2 {
+#strategic p {
+  margin-top: 20px;
+}
+.container  {
+  display: inline-block;
+  justify-content: center;
+  text-align: justify;
+  padding: 20px;
+}
+
+.linkinterest, .linkrelated, .linkadditional, .boxd, .boxe,  .finiquito1, .finiquito2 {
   grid-column: span 1; /* Each takes up one columns */
   grid-row: auto; /* Auto height based on content */
 }
@@ -305,9 +310,6 @@ tr:nth-child(even) {
 /* Sections using flexbox layout */
 .grid.hero,
 .grid.sidebar,
-.values,
-.related-images,
-.related-posts,
 .linkinterest,
 .linkrelated,
 .linkadditional,
