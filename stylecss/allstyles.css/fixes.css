@@ -1,0 +1,152 @@
+/* fixes.css - enhanced layout and alignment fixes */
+
+/* Fix logo container consistently centered */
+#logo {
+  position: relative !important;
+  margin: 20px auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Responsive main container with CSS grid */
+/* .main-container {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  grid-gap: 20px !important;
+  max-width: 1200px !important;
+  margin: 40px auto !important;
+  padding: 0 20px !important;
+} */
+
+/* Sidebar improvements */
+/* .grid.sidebar {
+  min-height: auto !important;
+  padding: 20px !important;
+  background-color: #f8f9fa !important;
+  border-radius: 10px !important;
+  border: 1px solid #007bff !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+} */
+
+/* Section box styling */
+.section {
+  margin: 0 auto !important;
+  margin-bottom: 1rem !important;
+  max-width: 1100px !important;
+  padding: 20px !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+  border-radius: 8px !important;
+  background-color: #fff !important;
+  border: 1px solid #ddd !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.section-one {
+  margin: 0 auto !important;
+  margin-bottom: 1rem !important;
+  max-width: 1100px !important;
+  padding: 20px !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+  border-radius: 8px !important;
+  background-color: #fff !important;
+  border: 1px solid #ddd !important;
+  display: grid !important;
+  grid-template-rows: 100px !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+div.content-item {
+  grid-row-start: -1;
+  grid-row-end: 4;
+}
+
+/* Image styling with fixed aspect ratio to prevent layout shift */
+.image-wrapper .the-image {
+  max-width: 500px !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
+  margin-top: 20px !important;
+  margin-bottom: 5% !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+}
+
+/* Video styling like images */
+video {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 10px !important;
+  margin-top: 20px !important;
+  overflow: auto !important;
+}
+
+/* Hamburger and close button alignment */
+.hamburguer, .close {
+  margin: 0 !important;
+  font-size: 2em !important;
+  color: blue !important;
+}
+
+/* Header spacing cleanup */
+header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 20px !important;
+  margin: 30px 20px 10px 20px !important;
+}
+
+/* Navigation styles */
+nav a {
+  padding: 0.5rem 1rem !important;
+  color: blueviolet !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  border-top: 5px solid #00bff3 !important;
+  border-bottom: 5px solid #00bff3 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+nav a:hover, nav a:focus {
+  color: black !important;
+  background-color: greenyellow !important;
+  background-image: url(https://assets.codepen.io/296057/lil-bluedots.png) !important;
+}
+
+/* Responsive improvements */
+@media (max-width: 360px) {
+  .main-container {
+    grid-template-columns: 1fr !important;
+  }
+  #logo {
+    margin: 10px auto !important;
+    position: relative !important;
+    top: 0 !important;
+    right: 0 !important;
+  }
+  #logo img {
+    max-width: 50% !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+  h1 {
+    font-size: 3em !important;
+    line-height: 1.2 !important;
+  }
+  .grid.sidebar {
+    margin-top: 20px !important;
+  }
+}
+
+

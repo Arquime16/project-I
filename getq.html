@@ -22,6 +22,9 @@ Date: 11/22/2024-->
     <!--The style of the contact form was made, with several entries and data.-->
     <style>
       .form-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: #eaeaea;
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
@@ -32,94 +35,33 @@ Date: 11/22/2024-->
       }
       .form-content form {
         display: grid;
-        grid-template-columns: 10em 2fr; /* Two columns layout */
-        grid-template-rows: auto; /* Five rows layout */
-        justify-items: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
+        grid-template-columns: 1fr 2fr; /* Two columns layout */
         gap: 1em; /* Gap between elements */ 
         width: 100%; 
-        min-width: 30em;
         padding: 20px; 
-        background-color: #eaeaea
+        background-color: #eaeaea;
       }
       .form-content label {
-        display: flex;
-        flex-wrap: wrap;  
-        justify-content: center; /* Align to the center */
-        align-content: center; /* Center vertically */
-        grid-column: 1 / 2; /* Align labels in the first column */
-        grid-row: span 1; /* Span one row */
-        margin: 0; /* Center labels horizontally */
-        margin-top: 5px; /* Spacing above the labels */
-        margin-left: 150px; /* Align labels to the left */
-      }
-      .form-content label[type="text"] {
-        width: 30%; /* Half width for labels */
-        padding: 10px; 
-        margin-top: 10px; /* Spacing above the labels */
-        margin-right: 300px; /* Align labels to the right */
+       justify-self: end;
+       font-weight: bold; 
       }
       .form-content input[type="text"],
       .form-content input[type="tel"],
-      .form-content input[type="date"] {
-        display: flex; 
-        flex-wrap: wrap;
-        justify-content: center; /* Align inputs to the center */ 
-        align-content: center; /* Center vertically */ 
-        grid-column: 2 / 3; /* Align inputs in the second column */
-        grid-row: span 1; /* Span one row */
-        width: 100%; /* Full width for inputs */ 
+      .form-content input[type="date"],
+      .form-content select {
+        width: 90%; /* Full width for inputs */ 
         padding: 10px; 
-        margin-top: 10px; /* Spacing above the inputs */
-        margin-right: 270px; /* Align inputs to the right */
         border: 1px solid #ccc; 
         border-radius: 5px; 
       }
-      .form-content input[type="text"] {
-        width: 50%; /* Half width for inputs */
-        padding: 10px;
-        margin-top: 10px;
-        margin-right: 250px; /* Align labels to the right */
-        margin-left: 100px; /* Align labels to the right */
-      }
-      .form-content input[type="tel"] {
-        width: 50%; /* Half width for inputs */
-        padding: 10px;
-        margin-top: 10px;
-        margin-right: 200px; /* Align labels to the right */
-        margin-left: 50px; /* Align labels to the right */
-      }
-      .form-content input[type="date"] {
-        width: 50%; /* Half width for inputs */
-        padding: 10px;
-        margin-top: 10px;
-        margin-right: 200px; /* Align labels to the right */
-        margin-left: 50px; /* Align labels to the left */
-      } 
+   
       input:focus {
         outline: 2px solid royalblue;
         box-shadow: 1px 1px 8px 1px royalblue;
       }
-      select {
-        display: flex; 
-        flex-wrap: wrap; 
-        justify-content: center; /* Align select to the center */ 
-        align-content: center; /* Center vertically */ 
-        grid-column: 2 / 3; /* Align select in the second column */ 
-        grid-row: span 1; /* Span one row */ 
-        width: 50%; /* Full width for select */ 
-        padding: 10px; 
-        margin-top: 10px; /* Spacing above the select */ 
-        margin-right: 200px; /* Align select to the right */ 
-        margin-left: 50px; /* Align select to the left */
-        border: 1px solid #ccc; 
-        border-radius: 5px; 
-      }
       input[type="submit"] { 
-        display: flex; 
-        justify-content: center; /* Center the submit button */ 
-        align-items: center; /* Center vertically */ 
-        grid-column: span 4; /* Span across both columns */ 
+        display: block;
+        margin: 10px auto;
         width: 10em; /* Fixed width for submit button */ 
         padding: 10px; 
         background-color: #007bff; 
@@ -129,10 +71,9 @@ Date: 11/22/2024-->
         cursor: pointer; 
         font-size: 1rem; 
         transition: background-color 0.3s ease; 
-        margin-top: 10px; /* Spacing above the button */
       }
       input[type="submit"]:hover { 
-        background-color: #0056b3; 
+        background-color: #007bff; 
       }
       
     </style>
@@ -442,12 +383,17 @@ Date: 11/22/2024-->
       document.getElementById('startDate').addEventListener('change', updateEndDate);
 
       function updateEndDate() {
-        const daysCounter = parseInt(document.getElementById('daysCounter').value);
-        const startDate = new Date(document.getElementById('startDate').value);
-        if (isNaN(startDate)) return; // Ensure the start date is valid
+        const daysCounter = document.getElementById('daysCounter').value;
+        const startDateInput = document.getElementById('startDate').value;
+        
+       if(!startDateInput || daysCounter === 'custom') return;
           
+        const startDate = new Date(startDateInput);
+        const days = parseInt(daysCounter);
+        if(isNaN(startDate.getTime()) || isNaN(days)) return;
+        
         const endDate = new Date(startDate);
-        endDate.setDate(startDate.getDate() + daysCounter);
+        endDate.setDate(startDate.getDate() + days);
 
         //Format the date as YYYY-MM-DD
         const formattedEndDate = endDate.toISOString().split('T')[0];
@@ -457,13 +403,14 @@ Date: 11/22/2024-->
     <script>
       // Function to generate the initial list of numbers (I still don't know how it works)
       function generateNumberList() {
-          const numberList = document.getElementById('numberList');
+          const container = document.createElement('div');
+          container.id = 'numberList';
           for (let i = 1; i <= 9; i++) {
               const numberItem = document.createElement('div');
-              numberItem.className = 'number-item';
               numberItem.textContent = i;
-              numberList.appendChild(numberItem);
+              container.appendChild(numberItem);
           }
+        document.body.appendChild(container);
       }
 
       // Function to add the additional number input by the user
