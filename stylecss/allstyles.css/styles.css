@@ -656,7 +656,7 @@ margin-top: 30px;
 }
 /* Mission, Vision, Values blocks */ 
 .content-mission, .content-vision { 
-  background-color: red; 
+  background-color: lightskyblue; 
   color: white; 
   width: 300px; 
   padding: 25px; 
@@ -666,6 +666,59 @@ margin-top: 30px;
 /*Headings inside blocks*/ 
 .content-mission h3, .content-vision h3 { 
   margin-bottom: 15px; 
+}
+/*Link Section Website*/
+#fourlayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two Columns */
+  gap: 30px;
+}
+div.linkinterest {
+  width: 40vw;
+  height: 50vh;
+  margin: 30px;
+}
+div.linkrelated {
+  width: 40vw;
+  height: 50vh;
+  margin: 30px;
+}
+div.finiquito3 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+div.linkadditional {
+  width: 40vw;
+  height: 50vh;
+  margin: 30px;
+}
+div.boxd {
+  width: 40vw;
+  height: 50vh;
+  margin: 30px;
+}
+div.boxe {
+  width: 40vw;
+  height: 50vh;
+  margin: 30px;
+}
+div.finiquito1 {
+  width: 40vw;
+  height: 50vh;
+  margin: 30px;
+}
+div.finiquito2 {
+  width: 40vw;
+  height: 50vh;
+  margin: 30px;
+}
+div.finiquito3 {
+  width: 40vw;
+  height: 50vh;
+  margin: 30px;
+}
+div#fourlayout {
+  gap: 10px;
 }
 
 /*Media queries of website was created with a size max-width: 480px*/
