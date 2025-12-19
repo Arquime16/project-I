@@ -672,6 +672,7 @@ margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two Columns */
   gap: 30px;
+  margin: 40px;
 }
 div.linkinterest {
   width: 40vw;
