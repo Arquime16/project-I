@@ -728,6 +728,9 @@ div#content {
   margin: 30px;
   margin-top: 40px;
 }
+div.content-title h2 {
+  margin-top: 40px;
+}
 
 /*Media queries of website was created with a size max-width: 480px*/
 
