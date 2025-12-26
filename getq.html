@@ -2,7 +2,7 @@
 Filename:getq.html
 Date: 11/22/2024-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <!--This section includes tags that allow you to display the style of the web page and the description related to SEO.-->    
   <head>
     <meta charset="utf-8" />
@@ -30,6 +30,8 @@ Date: 11/22/2024-->
         text-align: center;
         width: 100%;
         max-width: 700px;
+        height: 130vh;
+        min-height: 180px;
         padding: 1.5em;
         margin: 0 auto;
       }
@@ -40,6 +42,9 @@ Date: 11/22/2024-->
         width: 100%; 
         padding: 20px; 
         background-color: #eaeaea;
+        margin-top: 50px;
+        margin-bottom: 120px;
+        margin-right: 20px;
       }
       .form-content label {
        justify-self: end;
@@ -75,7 +80,12 @@ Date: 11/22/2024-->
       input[type="submit"]:hover { 
         background-color: #007bff; 
       }
-      
+      input#stybot {
+        position: absolute;
+        bottom: -132%;
+        left: 45%;
+      }
+    
     </style>
   </head>
   <body>
@@ -348,7 +358,7 @@ Date: 11/22/2024-->
         <input type="date" id="startDate">
         <label for="endDate">End Date:</label>
         <input type="date" id="endDate">
-        <input type="submit" value="Submit">
+        <input id="stybot" type="submit" value="Submit">
       </form>
     </div>        
     </main>
@@ -401,18 +411,6 @@ Date: 11/22/2024-->
       }
     </script>
     <script>
-      // Function to generate the initial list of numbers (I still don't know how it works)
-      function generateNumberList() {
-          const container = document.createElement('div');
-          container.id = 'numberList';
-          for (let i = 1; i <= 9; i++) {
-              const numberItem = document.createElement('div');
-              numberItem.textContent = i;
-              container.appendChild(numberItem);
-          }
-        document.body.appendChild(container);
-      }
-
       // Function to add the additional number input by the user
       function addAdditionalNumber() {
           const additionalNumber = document.getElementById('additionalNumber').value;

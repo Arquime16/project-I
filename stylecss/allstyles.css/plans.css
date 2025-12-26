@@ -113,7 +113,7 @@ nav a:hover {
 #logo img {
   width: auto;
   height: 60px; /* Adjust the height as needed */
-  margin-top: -3px; /* Consistent margin */
+  margin-top: 5px; /* Consistent margin */
   margin-bottom: auto;
   margin-right: 5em;
 }
@@ -196,12 +196,17 @@ main h1 {
 }
 /*The second container was formatted and an ID was placed for greater specificity.*/
 #trips {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
+    max-width: 1200px;
+    width: 80vw;
+    min-height: 1800px;
+    height: 20vh;
+    margin: 5em;
     margin-top: 40px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
+    justify-self: center;
+    align-items: center;
     border-radius: 20px;
     background-color: whitesmoke;
 }
