@@ -1,13 +1,13 @@
 /* fixes.css - enhanced layout and alignment fixes */
 
 /* Fix logo container consistently centered */
-#logo {
+/* #logo {
   position: relative !important;
   margin: 20px auto !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-}
+} */
 
 /* Responsive main container with CSS grid */
 /* .main-container {
@@ -87,23 +87,23 @@ video {
 }
 
 /* Hamburger and close button alignment */
-.hamburguer, .close {
+/* .hamburguer, .close {
   margin: 0 !important;
   font-size: 2em !important;
   color: blue !important;
-}
+} */
 
 /* Header spacing cleanup */
-header {
+/* header {
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
   padding: 20px !important;
   margin: 30px 20px 10px 20px !important;
-}
+} */
 
 /* Navigation styles */
-nav a {
+/* nav a {
   padding: 0.5rem 1rem !important;
   color: blueviolet !important;
   font-weight: 600 !important;
@@ -113,7 +113,7 @@ nav a {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-}
+} */
 
 nav a:hover, nav a:focus {
   color: black !important;
