@@ -738,6 +738,60 @@ a.hamburguer{
 html, body {
   overflow-x: hidden;
 }
+#subscribe {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#subscribe h2 {
+  margin: 0 0 20px;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: #333;
+}
+
+#subscribe form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+#subscribe input[type="text"],
+#subscribe input[type="email"] {
+  flex: 1 1 250px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+#subscribe input[type="text"]:focus,
+#subscribe input[type="email"]:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.2);
+}
+
+#subscribe input[type="submit"] {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0077cc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#subscribe input[type="submit"]:hover {
+  background-color: #005fa3;
+}
 
 
 
